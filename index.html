@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Section</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+</head>
+<body class="bg-gray-100">
+
+  <section id="contact" class="py-20 px-6 bg-gray-200">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">
+        Get In <span class="text-blue-600">Touch</span>
+      </h2>
+
+      <div class="mt-12">
+        <div id="submittedMessage" class="hidden space-y-6">
+          <div class="bg-blue-100 border border-blue-300 rounded-md p-6 mb-6">
+            <h3 class="text-xl font-bold mb-2">Thank you for your message!</h3>
+            <p class="text-gray-700">We'll contact you soon.</p>
+          </div>
+          <button onclick="resetForm()" class="w-full border border-gray-400 px-4 py-2 rounded hover:bg-gray-300">
+            Send Another Message
+          </button>
+        </div>
+
+        <form id="contactForm" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input type="text" id="name" placeholder="Your Name" required class="p-3 border rounded w-full" />
+            <input type="email" id="email" placeholder="Your Email" required class="p-3 border rounded w-full" />
+          </div>
+          <input type="text" id="subject" placeholder="Subject" required class="p-3 border rounded w-full" />
+          <textarea id="message" placeholder="Your Message" required class="p-3 border rounded w-full h-32"></textarea>
+          <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 flex items-center justify-center">
+            <span id="btnText">Send Message</span>
+            <svg id="sendIcon" class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 2L11 13"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 2L15 22l-4-9-9-4 20-7z"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
